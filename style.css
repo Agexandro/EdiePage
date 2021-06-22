@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 48px;
+    line-height: 72px;
+}
+
+h2 {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 36px;
+    line-height: 54px;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+div:hover {
+    border: 1px dotted black;
+}
+
+nav h4 {
+    font-family: 'Heebo';
+    font-size: 36px;
+    line-height: 53px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+nav .space {
+    flex-grow: 1;
+}
+
+nav .links {
+    width: 703px;
+    height: 36px;
+    font-size: 24px;
+    line-height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.p1 p {
+    color: #2D9CDB;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.p1 h1 {
+    width: 543px;
+}
+
+.p2 h1, p {
+    width: 366px;
+}
+
+.p2 p {
+    line-height: 27px;
+    font-weight: 400;
+    font-size: 18px;
+    font-style: normal;
+}
+
+.p2 label {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: #828282;
+    line-height: 21px;
+}
+
+.join {
+    background-color: #F2F2F2;
+    border-radius: 12px;
+    width: 350px;
+    height: 57px;
+    display: flex;
+}
+
+.join input {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 27px;
+    height: 27px;
+    width: 100%;
+    align-self: center;
+    border: none;
+    background-color: transparent;
+    margin-left: 21px;
+    outline: none;
+    color: #333;
+}
+
+input:placeholder-shown {
+    color: #BDBDBD;
+}
+
+.join button {
+    height: 49px;
+    width: 94px;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #F2F2F2;
+    background-color: #2D9CDB;
+    align-self: center;
+    border: none;
+    border-radius: 12px;
+}
+
+.content .row h2 {
+    width: 346px;
+    height: 104px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.columns .card {
+    width: 341px;
+    height: 422px;
+    border-radius: 24px;
+}
+
+.columns .card:nth-child(2) {
+    box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.1);
+}
