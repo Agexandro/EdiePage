@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.logo {
+  font-family: "Heebo";
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 53px;
+  color: #333;
+}
+
+main {
+  margin: 42px 52px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-links {
+  width: 703px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nav-links a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #333;
+  text-decoration: none;
+}
+
+.section {
+  margin-top: 96px;
+  margin-left: 18%;
+}
+
+.section p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  color: #2d9cdb;
+}
+
+.section h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 72px;
+  color: #333;
+  width: 543px;
+}
+
+.hero_image img {
+  width: 100%;
+  border-radius: 18px;
+  margin: 42px 0;
+}
+/*# sourceMappingURL=main.css.map */

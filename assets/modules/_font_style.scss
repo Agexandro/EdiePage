@@ -1,0 +1,8 @@
+@mixin  text_style($f_size, $l_height, $f_weight: 500, $f_color:#333, $f_style:normal, $f_family:"Poppins"){
+    font-family: $f_family;
+    font-style: $f_style;
+    font-size: $f_size;
+    font-weight: $f_weight;
+    line-height: $l_height;
+    color:$f_color;
+}

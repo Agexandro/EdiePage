@@ -1,0 +1,51 @@
+@import "modules/font_style";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    @include text_style($f_size: 36px, $f_weight: 800, $l_height: 53px, $f_family: "Heebo");
+}
+
+main {
+    margin: 42px 52px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    width: 703px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links a {
+    @include text_style($f_size: 24px, $f_weight: 500, $l_height: 36px);
+    text-decoration: none;
+}
+
+.section {
+    margin-top: 96px;
+    margin-left: 18%;
+    p {
+        @include text_style($f_size: 18px, $l_height: 27px, $f_color: #2d9cdb);
+    }
+    h2 {
+        @include text_style($f_size: 48px, $l_height: 72px);
+        width: 543px;
+    }
+}
+
+.hero_image img {
+    width: 100%;
+    border-radius: 18px;
+    margin: 42px 0;
+}
