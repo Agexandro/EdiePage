@@ -1,4 +1,5 @@
 @import "modules/font_style";
+@import "modules/card";
 
 * {
     margin: 0;
@@ -20,6 +21,19 @@ nav {
     align-items: center;
 }
 
+h2 {
+    @include text_style($f_size: 48px, $l_height: 72px);
+}
+
+h3 {
+    width: 346px;
+    @include text_style($f_size: 36px, $l_height: 54px);
+}
+
+h4 {
+    @include text_style($f_size: 24px, $f_weight: 700, $l_height: 36px);
+}
+
 .nav-links {
     width: 703px;
     height: 36px;
@@ -28,19 +42,20 @@ nav {
 }
 
 .nav-links a {
-    @include text_style($f_size: 24px, $f_weight: 500, $l_height: 36px);
+    @include text_style($f_size: 24px, $l_height: 36px);
     text-decoration: none;
 }
 
 .section {
-    margin-top: 96px;
-    margin-left: 18%;
+    @include card(
+        $w: 543px,
+        $h: fit-content,
+        $margin: (
+            96px 0 0 18%,
+        )
+    );
     p {
         @include text_style($f_size: 18px, $l_height: 27px, $f_color: #2d9cdb);
-    }
-    h2 {
-        @include text_style($f_size: 48px, $l_height: 72px);
-        width: 543px;
     }
 }
 
@@ -48,4 +63,83 @@ nav {
     width: 100%;
     border-radius: 18px;
     margin: 42px 0;
+}
+
+.card {
+    @include card(
+        $w: 366px,
+        $h: fit-content,
+        $margin: (
+            0 0 200px 18%,
+        )
+    );
+
+    p {
+        @include text_style($f_size: 18px, $l_height: 27px, $f_weight: 400, $f_color: #4f4f4f);
+        margin: 42px 0px;
+    }
+    .field {
+        label {
+            @include text_style($f_size: 14px, $l_height: 21px, $f_color: #828282);
+        }
+
+        .form {
+            display: flex;
+            input {
+                @include text_style($f_size: 18px, $l_height: 27px);
+                @include card(
+                    $w: 100%,
+                    $h: 49px,
+                    $padding: (
+                        15px 21px,
+                    ),
+                    $b_radius: 12px
+                );
+                background-color: #f2f2f2;
+                outline: none;
+            }
+
+            input:placeholder-shown {
+                @include text_style($f_size: 18px, $l_height: 27px);
+            }
+
+            button {
+                background-color: #2d9cdb;
+                outline: none;
+                @include card($w: 94px, $h: 49px, $b_radius: 12px);
+                @include text_style($f_size: 18px, $l_height: 27px, $f_color: #f2f2f2);
+            }
+        }
+    }
+}
+
+.services {
+
+    .material-icons {
+        @include icon_card();
+    }
+
+    .material-icons.code{
+        background-color: #27AE60;
+    }
+
+    .material-icons.list {
+        background-color: #EB5757;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        div {
+            @include card($w: 341px, $h: 422px, $padding: 46px 34px);
+
+            p {
+                @include text_style($f_size:16px, $f_weight:400, $l_height: 24px, $f_color:#4F4F4F);
+            }
+        }
+
+        .service2 {
+            @include card($w: 341px, $h: 422px, $padding: 46px 34px, $box_shadow: 0px 10px 30px rgba(51, 51, 51, 0.1));
+        }
+    }
 }

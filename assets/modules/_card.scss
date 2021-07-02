@@ -1,0 +1,16 @@
+@mixin card($w: 0, $h: 0, $margin: 0, $padding: 0, $b_radius: 0, $border: none, $box_shadow:none) {
+    width: $w;
+    height: $h;
+    margin: $margin;
+    padding: $padding;
+    border-radius: $b_radius;
+    border: $border;
+    box-shadow: $box_shadow;
+}
+
+@mixin icon_card($bg_color:#2d9cdb) {
+    @include card($w: 67px, $h: 67px, $padding: 20px, $b_radius: 16px);
+    background-color: #2d9cdb;
+    color: white;
+    font-size: 27px;
+}
