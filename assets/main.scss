@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.menu {
+    display: none;
+}
+
 .logo {
     @include text_style($f_size: 36px, $f_weight: 800, $l_height: 53px, $f_family: "Heebo");
 }
@@ -66,6 +70,9 @@ h4 {
 }
 
 .card {
+    h3 {
+        width: 346px;
+    }
     @include card(
         $w: 366px,
         $h: fit-content,
@@ -78,68 +85,402 @@ h4 {
         @include text_style($f_size: 18px, $l_height: 27px, $f_weight: 400, $f_color: #4f4f4f);
         margin: 42px 0px;
     }
-    .field {
-        label {
-            @include text_style($f_size: 14px, $l_height: 21px, $f_color: #828282);
+}
+
+.field {
+    label {
+        @include text_style($f_size: 14px, $l_height: 21px, $f_color: #828282);
+    }
+
+    .form {
+        display: flex;
+        background-color: #f2f2f2f2;
+        border-radius: 12px;
+        padding: 2px;
+        input {
+            @include text_style($f_size: 18px, $l_height: 27px);
+            @include card(
+                $w: 100%,
+                $h: 49px,
+                $padding: (
+                    15px 21px,
+                ),
+                $b_radius: 12px
+            );
+            background-color: transparent;
+            outline: none;
         }
 
-        .form {
-            display: flex;
-            input {
-                @include text_style($f_size: 18px, $l_height: 27px);
-                @include card(
-                    $w: 100%,
-                    $h: 49px,
-                    $padding: (
-                        15px 21px,
-                    ),
-                    $b_radius: 12px
-                );
-                background-color: #f2f2f2;
-                outline: none;
-            }
+        input:placeholder-shown {
+            @include text_style($f_size: 18px, $l_height: 27px);
+        }
 
-            input:placeholder-shown {
-                @include text_style($f_size: 18px, $l_height: 27px);
+        button {
+            background-color: #2d9cdb;
+            outline: none;
+            @include card($w: 94px, $h: 49px, $b_radius: 12px);
+            @include text_style($f_size: 18px, $l_height: 27px, $f_color: #f2f2f2);
+        }
+    }
+}
+.content {
+    width: 85%;
+    margin: auto;
+}
+
+.services {
+    .title {
+        width: 346px;
+    }
+    .material-icons {
+        @include icon_card();
+        margin-bottom: 20px;
+    }
+
+    .material-icons.code {
+        background-color: #27ae60;
+    }
+
+    .material-icons.list {
+        background-color: #eb5757;
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+        div {
+            @include card($w: 341px, $h: 422px, $padding: 46px 34px);
+
+            p {
+                margin: 20px 0px;
+                @include text_style($f_size: 16px, $f_weight: 400, $l_height: 24px, $f_color: #4f4f4f);
             }
 
             button {
+                @include text_style($f_size: 16px, $l_height: 24px, $f_color: #828282);
+                @include card($w: 116px, $h: 42px, $b_radius: 12px);
+            }
+        }
+
+        div:hover {
+            @include card($w: 341px, $h: 422px, $padding: 46px 34px, $box_shadow: 0px 10px 30px rgba(51, 51, 51, 0.1));
+            button {
+                color: white;
                 background-color: #2d9cdb;
-                outline: none;
-                @include card($w: 94px, $h: 49px, $b_radius: 12px);
-                @include text_style($f_size: 18px, $l_height: 27px, $f_color: #f2f2f2);
+                cursor: pointer;
             }
         }
     }
 }
 
-.services {
+.examples {
+    margin-top: 194px;
 
-    .material-icons {
-        @include icon_card();
+    .title {
+        width: 448px;
     }
 
-    .material-icons.code{
-        background-color: #27AE60;
-    }
+    .grid {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto auto;
+        justify-content: center;
 
-    .material-icons.list {
-        background-color: #EB5757;
-    }
-
-    .flex {
-        display: flex;
-        justify-content: space-between;
         div {
-            @include card($w: 341px, $h: 422px, $padding: 46px 34px);
-
+            @include card($w: 544px, $h: fit-content);
+            img {
+                width: 100%;
+                border-radius: 12px;
+            }
             p {
-                @include text_style($f_size:16px, $f_weight:400, $l_height: 24px, $f_color:#4F4F4F);
+                @include text_style($f_size: 14px, $f_weight: 400, $l_height: 21px, $f_color: #828282);
+            }
+            h5 {
+                @include text_style($f_size: 24px, $l_height: 24px);
             }
         }
 
-        .service2 {
-            @include card($w: 341px, $h: 422px, $padding: 46px 34px, $box_shadow: 0px 10px 30px rgba(51, 51, 51, 0.1));
+        div:nth-child(2n + 1) {
+            margin-top: 188px;
+        }
+    }
+
+
+}
+
+.more {
+    position: relative;
+    top: -24px;
+    width: 100%;
+    justify-content: end;
+    display: flex;
+    @include text_style($f_size: 18px, $l_height: 27px, $f_color: #2d9cdb);
+}
+
+.team {
+    display: flex;
+    margin-top: 219px;
+    margin-bottom: 196px;
+    .info {
+        width: 50%;
+
+        h3 {
+            width: 280px;
+        }
+
+        p {
+            width: 280px;
+        }
+
+        p:first-child {
+            @include text_style($f_size: 18px, $l_height: 27px, $f_color: #eb5757);
+        }
+
+        p:last-child {
+            @include text_style($f_size: 16px, $f_weight: normal, $l_height: 24px, $f_color: #4f4f4f);
+        }
+    }
+
+    .photos {
+        width: fit-content;
+        grid-gap: 20px;
+        align-items: center;
+        display: grid;
+        grid-template:
+            "p1 p2"
+            "p1 p3";
+
+        .photo1 {
+            grid-area: p1;
+        }
+        .photo2 {
+            grid-area: p2;
+        }
+        .photo3 {
+            grid-area: p3;
+        }
+
+        .photo2 img {
+            @include card($w: 260px, $h: 260px, $b_radius: 24px);
+        }
+        .photo1 img,
+        .photo3 img {
+            @include card($w: 291px, $h: 300px, $b_radius: 24px);
+        }
+    }
+}
+
+.content {
+    h3 {
+        width: 937px;
+    }
+    .manager {
+        margin-top: 49px;
+        display: flex;
+        img {
+            @include card($w: 80px, $h: 80px, $b_radius: 12px);
+        }
+        .info {
+            padding-left: 20px;
+
+            h4 {
+                font-weight: 500;
+            }
+            p {
+                @include text_style($f_size: 18px, $l_height: 27px, $f_color: #828282);
+            }
+        }
+    }
+}
+
+footer {
+    overflow: hidden;
+    position: relative;
+    margin-top: 203px;
+    background-color: #100e1d;
+    padding: 46px;
+    .content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        color: white;
+    }
+
+    .footer-links a {
+        color: white !important;
+        display: block;
+        text-decoration: none;
+        @include text_style($f_size: 18px, $f_weight: 400, $l_height: 36px);
+    }
+
+    .field {
+        width: 350px;
+    }
+
+    .field label {
+        color: white !important;
+    }
+
+    .me {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        @include text_style($f_size: 14px, $l_height: 17px, $f_color: #f2f2f2);
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .examples .grid div {
+        width: 100%;
+    }
+
+    .team {
+        flex-flow: column;
+        align-items: center;
+        .photos {
+            margin-top: 40px;
+            width: fit-content;
+        }
+    }
+}
+
+@media only screen and (max-width: 1016px) {
+    .menu {
+        display: block;
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links-active {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .nav-links-active a {
+        color: white !important;
+        text-decoration: none;
+        @include text_style($f_size: 18px, $f_weight: 400, $l_height: 36px);
+    }
+
+    h3.h3-mob,
+    h2.h3-mob,
+    h3.title {
+        width: 100% !important;
+        @include text_style($f_size: 24px, $f_weight: 500, $l_height: 36px);
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    main {
+        margin: 0;
+    }
+
+    nav {
+        margin: 5%;
+    }
+
+    .hero_image {
+        width: 95%;
+        margin: auto;
+    }
+
+    .content {
+        width: 90%;
+        margin: auto;
+    }
+
+    .section {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .services .flex {
+        flex-flow: column;
+        width: 100%;
+
+        div {
+            width: 100% !important;
+        }
+    }
+
+    .team {
+        .info {
+            width: 100%;
+        }
+        .photos {
+            width: 100%;
+            grid-gap: 10px !important;
+            padding: 0;
+        }
+
+        .photos img {
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        .photo2 img {
+            width: 90% !important;
+        }
+    }
+
+    .content {
+        flex-flow: column;
+
+        .field,
+        .footer-links,
+        .social {
+            margin-top: 30px;
+            margin-bottom: 80px;
+        }
+    }
+
+        .more {
+            justify-content: start;
+            top: 0;
+            left: 0;
+    }
+
+    .examples .grid {
+        grid-template-columns: auto;
+
+        div {
+            margin-top: 20px !important;
+        }
+    }
+
+    footer {
+        .field {
+            width: 100%;
+        }
+
+        .me {
+            position: relative;
         }
     }
 }
