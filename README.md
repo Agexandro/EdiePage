@@ -15,3 +15,7 @@
 - Css3
 - SCSS
 - JavaScript
+
+## overview
+
+![screenshot](https://github.com/Agexandro/EdiePage/blob/master/images/image.png)
